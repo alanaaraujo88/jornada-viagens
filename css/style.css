@@ -30,3 +30,6 @@ body, img, h1, p, fieldset, legend, label, input, select, textarea, button {
     box-sizing: 0;
     
 }
+header{
+    background-color: #000000;
+}
