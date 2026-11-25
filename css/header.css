@@ -5,20 +5,58 @@ header {
   justify-content: space-between;
   align-items: center; /*flex-start*/
   padding: 38px 48px;
+  position: relative;
 }
 .logo {
   display: inline-block;
   width: 68px;
   height: 64px;
 }
-input[type="checkbox"]:checked ~nav{
-    display: block;
+input[type="checkbox"]:checked ~ nav {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-tertiary-color);
 }
-nav {
+.menu nav {
   display: none;
 }
-.menu{
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list-links {
+  list-style: none;
+}
+.list-links li {
+  margin: 16px 0;
+}
+.list-links a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  font-weight: var(--font-menu-weight);
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    margin-top: 0;
+    width: 467px;
+  }
+  .menu label {
+    display: none;
+  }
+  .menu nav {
+    display: block;
+    width: 100%;
+  }
+  .menu ul {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
 }
