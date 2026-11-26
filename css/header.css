@@ -12,6 +12,14 @@ header {
   width: 68px;
   height: 64px;
 }
+.logo-mobile {
+  display: block;
+}
+.logo-desktop {
+  display: none;
+  width: 260px;
+  height: 64px;
+}
 input[type="checkbox"]:checked ~ nav {
   display: block;
   position: absolute;
@@ -41,6 +49,11 @@ input[type="checkbox"]:checked ~ nav {
   font-size: 24px;
 }
 
+.menu a:active {
+  color: var(--text-secondary-color);
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     margin-top: 0;
@@ -59,4 +72,19 @@ input[type="checkbox"]:checked ~ nav {
     justify-content: space-between;
     padding: 0;
   }
+}
+@media screen and (min-width: 1024px) {
+  .logo-desktop {
+    display: block;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  header{
+    padding: 38px 120px;
+  }
+  .menu a:hover {
+  color: var(--hover-color);
+  font-weight: var(--font-title-weight);
+}
 }
